@@ -71,9 +71,8 @@ export default {
             </div>
         </div>
     </div>
-    <div>
-        prova
-    </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+
+</style>

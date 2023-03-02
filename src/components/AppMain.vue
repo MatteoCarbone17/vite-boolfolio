@@ -1,11 +1,11 @@
 <script>
 
-import CardComponent from './CardComponent.vue';
+import ProjectCardComponent from './ProjectCardComponent.vue';
 
 export default {
     name: 'AppMain',
     components: {
-        CardComponent,
+        ProjectCardComponent,
     },
     data() {
         return {
@@ -22,7 +22,7 @@ export default {
 
 <template >
   <section class="container">
-      <CardComponent />
+      <ProjectCardComponent />
   </section>
 
 </template>

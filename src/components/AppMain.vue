@@ -1,6 +1,6 @@
 <script>
 
-import CardComponent from './components/CardComponent.vue';
+import CardComponent from './CardComponent.vue';
 
 export default {
     name: 'AppMain',
@@ -24,8 +24,9 @@ export default {
 </script>
 
 <template >
-  
-  <CardComponent />
+  <section class="container">
+      <CardComponent />
+  </section>
 
 </template>
 

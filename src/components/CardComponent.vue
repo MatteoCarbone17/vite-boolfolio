@@ -36,8 +36,8 @@ export default {
 
 <template >
     <div class="row">
-        <div class="col">
-            <div class="card mb-5  rounded-4 p-5" v-for="project in projects"  >
+        <div class="col-4" v-for="project in projects" >
+            <div class="card mb-5 rounded-4 p-5">
                 <div class="card-header d-flex  rounded-4 bg-success text-light justify-content-between p-3">
                     <p>
                         Author : {{ project.author }}
@@ -54,11 +54,25 @@ export default {
                         <span class="badge rounded-pill text-bg-warning">#{{ project.type.name }}</span>
                     </div>
                     <div>
-                        <p class="card-text p-3">{{ project.content }}</p>
+                         <span class="badge rounded-pill text-bg-warning m-1 " v-for="technology in project.technologies">#{{ technology.name }}</span> 
+                    </div>
+                    <div>
+                        <p class="card-text p-3 text-">{{ project.content.substr(0,150) }}...</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <p class="card-text p-3">Project start: {{ project.project_date_start }}</p>
+                    </div>
+                    <div>
+                        <p class="card-text p-3">Project end: {{ project.project_date_end }}</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
+        prova
     </div>
 </template>
 

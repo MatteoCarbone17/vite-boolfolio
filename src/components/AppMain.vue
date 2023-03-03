@@ -1,11 +1,11 @@
 <script>
 
-import ProjectCardComponent from './ProjectCardComponent.vue';
+import ProjectsList from '../pages/ProjectsList.vue';
 
 export default {
     name: 'AppMain',
     components: {
-        ProjectCardComponent,
+        ProjectsList,
     },
     data() {
         return {
@@ -21,8 +21,8 @@ export default {
 </script>
 
 <template >
-  <section class="container">
-      <ProjectCardComponent />
+  <section>
+      <ProjectsList />
   </section>
 
 </template>

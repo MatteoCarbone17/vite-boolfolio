@@ -28,8 +28,9 @@ export default {
     <AppHeader/>
     <router-view></router-view>
   </header>
-  <main>
+  <main class="">
     <AppMain />
+    <router-view></router-view>
   </main>
 </template>
 

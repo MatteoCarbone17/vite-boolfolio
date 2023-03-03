@@ -32,14 +32,14 @@ export default {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <router-link :to="{ name:'home'}" class="nav-link active" aria-current="page" href="#">Home</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Projects</a>
+                                <router-link :to="{ name:'projects'}" class="nav-link active" aria-current="page" href="#">Projects</router-link>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About-us</a>
-                            </li>
+                            <!-- <li class="nav-item">
+                                <router-link :to="home" class="nav-link active" aria-current="page" href="#">Single Project</router-link>
+                            </li> -->
                         </ul>
                     </div>
                 </div>

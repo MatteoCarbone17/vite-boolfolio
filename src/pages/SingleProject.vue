@@ -6,7 +6,9 @@ export default {
 
 <template lang="">
     <div>
-        
+        <h1>
+            Show single Project
+        </h1>
     </div>
 </template>
 

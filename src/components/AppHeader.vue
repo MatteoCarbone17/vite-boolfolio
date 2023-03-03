@@ -32,10 +32,10 @@ export default {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <router-link :to="{ name:'home'}" class="nav-link active" aria-current="page" href="#">Home</router-link>
+                                <router-link :to="{ name:'home'}" class="nav-link" :class="this.$route.name === 'home' ? 'active' : ' ' " aria-current="page" href="#">Home</router-link>
                             </li>
                             <li class="nav-item">
-                                <router-link :to="{ name:'projects'}" class="nav-link active" aria-current="page" href="#">Projects</router-link>
+                                <router-link :to="{ name:'projects'}" class="nav-link" :class="this.$route.name === 'projects' ? 'active' : ' ' "  aria-current="page" href="#">Projects</router-link>
                             </li>
                             <!-- <li class="nav-item">
                                 <router-link :to="home" class="nav-link active" aria-current="page" href="#">Single Project</router-link>
@@ -49,4 +49,11 @@ export default {
     </section>
 </template>
 
-<style lang="scss"></style>
+<style scoped  lang="scss">
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+</style>

@@ -5,11 +5,15 @@ export default {
 </script>
 
 <template lang="">
-    <div>
+   <div class="container">
+    <div class="row">
+       <div class="col">
         <h1>
-            homepage
+            HomePage in building...
         </h1>
+       </div>
     </div>
+   </div>
 </template>
 
 <style lang="">

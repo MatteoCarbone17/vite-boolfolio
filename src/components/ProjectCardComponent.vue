@@ -38,7 +38,7 @@ export default {
     <div class="row">
         <div class="col-4" v-for="project in projects" >
             <div class="card mb-5 rounded-4 p-5">
-                <div class="card-header d-flex  rounded-4 bg-success text-light justify-content-between p-3">
+                <div class="card-header d-flex  rounded-4 bg-success text-light justify-content-between p-2">
                     <p>
                         Author : {{ project.author }}
                     </p>
@@ -62,10 +62,10 @@ export default {
                 </div>
                 <div class="card-footer">
                     <div>
-                        <p class="card-text p-3">Project start: {{ project.project_date_start }}</p>
+                        <p class="card-text p-1">Project start: {{ project.project_date_start }}</p>
                     </div>
                     <div>
-                        <p class="card-text p-3">Project end: {{ project.project_date_end }}</p>
+                        <p class="card-text p-1">Project end: {{ project.project_date_end }}</p>
                     </div>
                 </div>
             </div>

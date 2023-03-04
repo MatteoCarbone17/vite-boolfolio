@@ -53,7 +53,7 @@ export default {
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10">
+                <div class="col">
                     <AppProject v-for="project in projects" :project="project"  />
                 </div>
             </div>

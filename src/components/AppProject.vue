@@ -19,7 +19,7 @@ export default {
 
     methods: {
         getProjects() {
-            axios.get(this.urlAddress, {
+            axios.get(this.urlAddress + `${this.$route.params.id}`, {
                 params: {
 
                 }
@@ -73,7 +73,10 @@ export default {
                 <p class="card-text p-1">Project end: {{ project.project_date_end }}</p>
             </div>
         </div>
+        <div class="col-2 mt-3">
+            <router-link :to="{name:'SingleProject', params:{id: project.id} }" class="btn btn-outline-success" > Visualiza </router-link>
 
+        </div>
     </div>
 </template>
 

@@ -69,6 +69,11 @@ export default {
                             <p class="card-text p-1">Project end: {{ project.project_date_end }}</p>
                         </div>
                     </div>
+
+                    <button class="btn btn-outline-primary" >
+                        <router-link :to="{ name:'SingleProject'}" class="nav-link" :class="this.$route.name === 'SingleProject' ? 'active' : ' ' "  aria-current="page" href="#">About-Us</router-link>
+                    </button>
+
                 </div>
             </div>
         </div>

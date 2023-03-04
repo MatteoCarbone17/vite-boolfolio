@@ -1,31 +1,47 @@
 <script>
 export default {
     name: 'AppProject',
-    components: {
 
-    },
     data() {
         return {
+
         }
     },
-    props: {
-        'project': {
+    props:
+    {
+        'project':
+        {
             type: Object,
             required: true,
-        }
+        },
 
     },
 
     methods: {
+        getProjects() {
+            axios.get(this.urlAddress, {
+                params: {
+
+                }
+            })
+                .then((response) => {
+                    this.projects = response.data.results.data;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+        }
+    },
+    mounted() {
+
+
     },
 
-    created() {
-    },
 }
 </script>
 
 <template>
-    <div class="card  mb-5 rounded-4 p-5">
+    <div class="card mb-5 rounded-4 p-5">
         <div class="card-header d-flex  rounded-4 bg-success text-light justify-content-between p-2">
             <p>
                 Author : {{ project.author }}
@@ -57,7 +73,10 @@ export default {
                 <p class="card-text p-1">Project end: {{ project.project_date_end }}</p>
             </div>
         </div>
-    </div> 
+
+    </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="">
+    
+</style>

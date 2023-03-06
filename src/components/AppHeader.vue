@@ -36,9 +36,6 @@ export default {
                             <li class="nav-item">
                                 <router-link :to="{ name:'AboutUs'}" class="nav-link" :class="this.$route.name === 'AboutUs' ? 'active' : ' ' "  aria-current="page" href="#">About-Us</router-link>
                             </li>
-                            <!-- <li class="nav-item">
-                                <router-link :to="{ name:'SingleProject'}" class="nav-link" :class="this.$route.name === '' ? 'active' : ' ' "  aria-current="page" href="#">pos</router-link>
-                            </li> -->
                         </ul>
                     </div>
                 </div>

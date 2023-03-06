@@ -1,51 +1,48 @@
 <script>
+
 export default {
     name: 'AppProject',
 
     data() {
         return {
-
+            
         }
     },
     props:
     {
-        'project':
-        {
+        'project': {
             type: Object,
             required: true,
+        },
+        'isShow':{
+            type: Boolean,
+            required: false,
+            default: false,
         },
 
     },
 
     methods: {
-        getProjects() {
-            axios.get(this.urlAddress + `${this.$route.params.id}`, {
-                params: {
-
-                }
-            })
-                .then((response) => {
-                    this.projects = response.data.results.data;
-                })
-                .catch(function (error) {
-                    console.log(error);
-                })
-        }
+       
     },
     mounted() {
 
 
+    },
+    created() {
+    
     },
 
 }
 </script>
 
 <template>
-    <div class="card mb-5 rounded-4 p-5">
+
+<div class="card mb-5 rounded-4 p-5">
         <div class="card-header d-flex  rounded-4 bg-success text-light justify-content-between p-2">
-            <p>
+             <p>
                 Author : {{ project.author }}
-            </p>
+            </p> 
             <span>
                 <i class="fa-solid fa-envelopes-bulk"></i>
             </span>
@@ -74,10 +71,9 @@ export default {
             </div>
         </div>
         <div class="col-2 mt-3">
-            <router-link :to="{name:'SingleProject', params:{id: project.id} }" class="btn btn-outline-success" > Visualiza </router-link>
-
+            <router-link v-if="!isShow"  :to="{name:'project', params:{id: project.id} }" class="btn btn-outline-success" > Visualiza </router-link>
         </div>
-    </div>
+    </div> 
 </template>
 
 <style lang="">

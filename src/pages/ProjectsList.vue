@@ -1,6 +1,6 @@
 <script>
-import axios from 'axios';
 import AppProject from '../components/AppProject.vue';
+import axios from 'axios';
 
 
 export default {
@@ -13,12 +13,12 @@ export default {
         return {
             projects: [],
             loading: false,
-            urlAddress: 'http://127.0.0.1:8000/api/projects',
+            urlAddress: 'http://127.0.0.1:8000',
         }
     },
     methods: {
         getProjects() {
-            axios.get(this.urlAddress, {
+            axios.get(this.urlAddress + '/api/projects/', {
                 params: {
                    
                 }

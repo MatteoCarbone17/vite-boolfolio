@@ -30,7 +30,7 @@ const router = createRouter({
         },
          {
              path: '/projects/:id',
-             name: 'SingleProject',
+             name: 'project',
              component:SingleProject
          },
     ]

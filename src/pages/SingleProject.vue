@@ -12,20 +12,20 @@ export default {
         return {
             project: null,
             loading: false,
-            urlAddress: 'http://127.0.0.1:8000/api/projects',
+            urlAddress: 'http://127.0.0.1:8000',
         }
     },
    // + `${this.$route.params.id }`
     methods: {
         getProject() {
-            axios.get(this.urlAddress +`${this.$route.params.id}`, {
+            axios.get(this.urlAddress +`/api/projects/${this.$route.params.id}`, {
                 params: {
                   
                 }
             })
                 .then((response) => {
-                    this.projects = response.data.results.data;
-                    console.log(this.response);
+                    this.projects = response.data.results;
+                    console.warn(response);
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -37,7 +37,7 @@ export default {
     },
 
     created() {
-        this.getProject()
+         this.getProject()
     },
 }
 
@@ -50,7 +50,7 @@ export default {
         </h1>
     </div>
     <div class="row">
-        <AppProject :project="project"/>
+        <AppProject  :isShow="true" :project="project"  />
     </div>
 </template>
 

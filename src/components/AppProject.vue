@@ -5,7 +5,7 @@ export default {
 
     data() {
         return {
-            
+
         }
     },
     props:
@@ -14,7 +14,7 @@ export default {
             type: Object,
             required: true,
         },
-        'isShow':{
+        'isShow': {
             type: Boolean,
             required: false,
             default: false,
@@ -23,26 +23,18 @@ export default {
     },
 
     methods: {
-       
-    },
-    mounted() {
 
-
-    },
-    created() {
-    
     },
 
 }
 </script>
 
 <template>
-
-<div class="card mb-5 rounded-4 p-5">
+    <div class="card mb-5 rounded-4 p-5">
         <div class="card-header d-flex  rounded-4 bg-success text-light justify-content-between p-2">
-             <p>
+            <p>
                 Author : {{ project.author }}
-            </p> 
+            </p>
             <span>
                 <i class="fa-solid fa-envelopes-bulk"></i>
             </span>
@@ -51,12 +43,19 @@ export default {
             <div>
                 <h5 class="card-title mt-2 mb-2">{{ project.title }}</h5>
             </div>
+            <p>
+                Id Project: {{ project.id }}
+            </p>
+            <!-- <span class="badge rounded-pill text-bg-warning m-1 " v-for="types  in project.types">
+                   #{{ type.name }}
+            </span> -->
             <div>
                 <span class="badge rounded-pill text-bg-warning">#{{ project.type.name }}</span>
-            </div>
+            </div> 
             <div>
                 <span class="badge rounded-pill text-bg-warning m-1 " v-for="technology in project.technologies">#{{
-                    technology.name }}</span>
+                    technology.name }}
+                </span>
             </div>
             <div>
                 <p class="card-text p-3 text-">{{ project.content.substr(0, 150) }}...</p>
@@ -71,9 +70,11 @@ export default {
             </div>
         </div>
         <div class="col-2 mt-3">
-            <router-link v-if="!isShow"  :to="{name:'project', params:{id: project.id} }" class="btn btn-outline-success" > Visualiza </router-link>
+            <router-link v-if="!isShow" :to="{name: 'project', params: {id: project.id}}" class="btn btn-outline-success">
+                Visualiza 
+            </router-link>
         </div>
-    </div> 
+    </div>
 </template>
 
 <style lang="">

@@ -1,6 +1,6 @@
 <script>
-import axios from 'axios';
 import AppProject from '../components/AppProject.vue';
+import axios from 'axios';
 
 export default {
     name:'SingleProject',
@@ -10,7 +10,7 @@ export default {
     },
     data() {
         return {
-            project: null,
+             project: '',
             loading: false,
             urlAddress: 'http://127.0.0.1:8000',
         }
@@ -19,13 +19,11 @@ export default {
     methods: {
         getProject() {
             axios.get(this.urlAddress +`/api/projects/${this.$route.params.id}`, {
-                params: {
-                  
-                }
+               
             })
                 .then((response) => {
-                    this.projects = response.data.results;
-                    console.warn(response);
+                    this.project = response.data.results;
+                    console.warn(response.data.results);
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -44,11 +42,6 @@ export default {
 </script>
 
 <template>
-    <div class="row">
-        <h1>
-            Project :  {{ this.$route.params.id}}
-        </h1>
-    </div>
     <div class="row">
         <AppProject  :isShow="true" :project="project"  />
     </div>
